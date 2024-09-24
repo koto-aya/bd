@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bd.mapper.ChoiceAnswerMapper">
+
+    <resultMap id="BaseResultMap" type="com.bd.model.ChoiceAnswer">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="optionA" column="option_a" jdbcType="VARCHAR"/>
+            <result property="optionB" column="option_b" jdbcType="VARCHAR"/>
+            <result property="optionC" column="option_c" jdbcType="VARCHAR"/>
+            <result property="optionD" column="option_d" jdbcType="VARCHAR"/>
+            <result property="correctAnswer" column="correct_answer" jdbcType="VARCHAR"/>
+            <result property="analysis" column="analysis" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,option_a,option_b,
+        option_c,option_d,correct_answer,
+        analysis,create_time,update_time,
+        is_deleted
+    </sql>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bd.mapper.QuestionsMapper">
+
+    <resultMap id="BaseResultMap" type="com.bd.model.Questions">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="questionText" column="question_text" jdbcType="VARCHAR"/>
+            <result property="difficult" column="difficult" jdbcType="VARCHAR"/>
+            <result property="fromBankId" column="from_bank_id" jdbcType="INTEGER"/>
+            <result property="favorityNum" column="favority_num" jdbcType="INTEGER"/>
+            <result property="commentNum" column="comment_num" jdbcType="INTEGER"/>
+            <result property="clickNum" column="click_num" jdbcType="INTEGER"/>
+            <result property="tags" column="tags" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,question_text,difficult,
+        from_bank_id,favority_num,comment_num,
+        click_num,tags,create_time,
+        update_time,is_deleted
+    </sql>
+</mapper>
